@@ -1,0 +1,23 @@
+{
+  "name": "excel-import-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stateless Excel parsing microservice for project-owned MinIO and staging databases",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "npm run build && node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.13",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=24.x.x"
+  }
+}
